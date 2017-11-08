@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'haikunator'
 
 module Thredded
     class DisplayName < ActiveRecord::Base
