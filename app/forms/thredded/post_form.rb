@@ -50,5 +50,9 @@ module Thredded
       @post.save!
       true
     end
+    
+    def isOld?
+      return @topic.created_at < 3.month.ago
+    end
   end
 end
