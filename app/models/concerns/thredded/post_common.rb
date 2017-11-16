@@ -42,9 +42,7 @@ module Thredded
     # @return [ActiveRecord::Relation<Thredded.user_class>] users from the list of user names that can read this post.
     # @api private
     def readers_from_user_names(user_names)
-      DbTextSearch::CaseInsensitive
-        .new(readers, Thredded.user_name_column)
-        .in(user_names)
+      []
     end
 
     # Marks all the posts from the given one as unread for the given user
