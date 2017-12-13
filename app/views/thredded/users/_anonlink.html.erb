@@ -1,1 +1,4 @@
 <%= username %>
+<% if reader.admin %>
+  <%= " (#{realuser})" %>
+<% end %>

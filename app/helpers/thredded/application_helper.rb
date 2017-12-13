@@ -41,7 +41,8 @@ module Thredded
     
     def user_anon_link(post)
       username = DisplayName.create_unless_exists(post.user.id, post.postable_id)
-      render partial: 'thredded/users/anonlink', locals: { username: username.display_name }
+      reader = post.instance_variable_get(:@policy).instance_variable_get(:@user)
+      render partial: 'thredded/users/anonlink', locals: { username: username.display_name, reader: reader, realuser: post.user.username }
     end
 
     # @param user [Thredded.user_class]
