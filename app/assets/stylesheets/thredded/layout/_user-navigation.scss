@@ -19,3 +19,6 @@
   @extend %thredded--nav-tabs--item--badge;
 }
 
+.thredded--user-navigation--item.thredded--user-navigation--private-topics {
+  display: none;
+}
