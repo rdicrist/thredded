@@ -1,4 +1,6 @@
 <%= username %>
 <% if reader.admin %>
   <%= " (#{realuser})" %>
+  <%= button_to "Block User", "/users/block/#{userID}", :method => "get" %>
 <% end %>
+
