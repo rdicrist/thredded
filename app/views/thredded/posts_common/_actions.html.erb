@@ -1,4 +1,7 @@
 <% actions ||= {} %>
+<% reader= post.instance_variable_get(:@policy).instance_variable_get(:@user) %>
+
+<% actions ||= {} %>
 <% actions_html = capture do %>
   <%= view_hooks.post_common.actions.render self, post: post do %>
     <% if actions[:quote] && post.can_reply? %>
@@ -10,6 +13,9 @@
     <% if post.can_destroy? %>
       <%= render 'thredded/posts_common/actions/delete', post: post %>
     <% end %>
+    
+    
+    
     <% if post.read_state %>
       <%= view_hooks.post_common.mark_as_unread.render self, post: post do %>
         <%= render 'thredded/posts_common/actions/mark_as_unread', post: post %>
