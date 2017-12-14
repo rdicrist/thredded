@@ -1,7 +1,4 @@
 <% actions ||= {} %>
-<% reader= post.instance_variable_get(:@policy).instance_variable_get(:@user) %>
-
-<% actions ||= {} %>
 <% actions_html = capture do %>
   <%= view_hooks.post_common.actions.render self, post: post do %>
     <% if actions[:quote] && post.can_reply? %>
