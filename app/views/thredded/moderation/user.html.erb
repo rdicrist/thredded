@@ -10,8 +10,8 @@
     <%= view_hooks.moderation_user_page.user_title.render self, user: user do %>
       <h1 class="thredded--moderation--user--title">
         <%= user.username %>
-        <%= simple_format(user.screening) %>
     </h1>
+        <%= user.screening %>
     <% end %>
     <%= view_hooks.moderation_user_page.user_info.render self, user: user do %>
       <ul class="thredded--moderation--user--info">
