@@ -101,7 +101,7 @@ module Thredded
   self.layout = 'thredded/application'
   self.moderator_column = :admin
   self.user_name_column = :name
-  self.content_visible_while_pending_moderation = true
+  self.content_visible_while_pending_moderation = false
   self.show_topic_followers = false
   self.messageboards_order = :position
   self.autocomplete_min_length = 2
