@@ -45,7 +45,7 @@
                         class: 'thredded--button',
                         params: { id: user.to_model.id, moderation_state: 'blocked' } %>
         <% end %>
-          <%= button_to "Ban User", "/users/block/#{user.id}", :method => "get" %>
+          <%= button_to "Ban", "/users/block/#{user.id}", :method => "get" %>
       </div>
     <% end %>
     <% if @posts.present? %>
