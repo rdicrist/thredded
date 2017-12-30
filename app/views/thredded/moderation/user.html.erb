@@ -35,6 +35,7 @@
     <% end %>
     <%= view_hooks.moderation_user_page.user_moderation_actions.render self, user: user do %>
       <div class="thredded--user--moderation-actions">
+        <% unless user_detail.banned? %>
         <% unless user_detail.approved? %>
           <%= button_to t('thredded.moderation.approve_btn'), moderate_user_path,
                         class: 'thredded--button',
@@ -45,8 +46,9 @@
                         class: 'thredded--button',
                         params: { id: user.to_model.id, moderation_state: 'blocked' } %>
         <% end %>
-          <%= button_to "Ban", "/users/block/#{user_detail.user_id}", :method => "get", data: { confirm: 'Are you sure you want to ban #{user.username}? This action is permanent and cannot be undone.' } %>
-      </div>
+          <%= button_to "Ban", "/users/block/#{user_detail.user_id}", :method => "get", data: { confirm: 'Are you sure you want to ban this user? This action is permanent and cannot be undone.' } %>
+       <% end %>
+    </div>
     <% end %>
     <% if @posts.present? %>
       <h2><%= t 'thredded.users.recent_activity' %></h2>
