@@ -111,7 +111,7 @@ $thredded-onebox-favicon-properties: () !default;
 
 // Messageboards grid
 // Whether to display messageboards as a grid on the desktop screen sizes.
-$thredded-messageboards-grid: false !default;
+$thredded-messageboards-grid: true !default;
 // Paddings within a grid item
 $thredded-messageboards-grid-item-padding-x: ($thredded-base-spacing * 0.8) !default;
 $thredded-messageboards-grid-item-padding-y: $thredded-base-spacing !default;
