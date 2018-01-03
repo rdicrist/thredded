@@ -77,8 +77,8 @@ en:
         empty:
           content: All posts have been moderated.
           title: Good job!
-      post_approved_html: Post approved %{time_ago}.
-      post_blocked_html: Post blocked %{time_ago}. 
+      post_approved_html: Post approved by %{moderator} %{time_ago}.
+      post_blocked_html: Post blocked by %{moderator} %{time_ago}. 
       post_deleted_notice: This post has been deleted.
       posts_content_changed_since_moderation_html: >-
         The <a href="%{post_url}">post's</a> content change since it was moderated. Below is the content at the
