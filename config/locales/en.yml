@@ -61,7 +61,7 @@ en:
         update_btn_submitting: :thredded.form.update_btn_submitting
       index:
         page_title: Messageboards
-      last_updated_by_html: Updated %{time_ago} <cite>by %{user}</cite>
+      last_updated_by_html: Updated %{time_ago}
       topics_and_posts_counts: "%{topics_count} topics / %{posts_count} posts"
       update: :thredded.form.update
       updated_notice: Messageboard has been updated
