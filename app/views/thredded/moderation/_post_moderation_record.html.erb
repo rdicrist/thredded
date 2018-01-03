@@ -5,10 +5,10 @@
     post_view = Thredded::PostView.new(post, policy(post))
   end
   moderation_state_notice_args = {
+      moderator: user_link(record.moderator),
       time_ago:  time_ago(record.created_at)
   }
 %>
-<!-- moderator: user_link(record.moderator), (this line originally in line 8-->
 <article class="thredded--post-moderation-record thredded--post-moderation-record-<%= record.moderation_state %>">
   <header class="thredded--post-moderation-record--header">
     <p class="thredded--post-moderation-record--moderation-state-notice">
