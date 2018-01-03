@@ -1,6 +1,6 @@
 <% user_detail = user.thredded_user_detail %>
 <%= user_detail.moderation_state.to_s.humanize %>
 <%= time_ago user_detail.moderation_state_changed_at, default: '' %>
-<%= if user_detail.moderation_id != null %>
+<% if user_detail.moderation_id != null %>
   <%= User.find_by(id: user_detail.moderation_id).username %>
-<%= end %>
+<% end %>
