@@ -70,6 +70,7 @@ module Thredded
       return head(:bad_request) unless Thredded::UserDetail.moderation_states.include?(params[:moderation_state])
       user = Thredded.user_class.find(params[:id])
       user.thredded_user_detail.update!(moderation_state: params[:moderation_state])
+      user.thredded_user_detail.update!(moderation_id: thredded_current_user.thredded_user_detail.user_id)
       redirect_back fallback_location: user_moderation_path(user.id)
     end
 
