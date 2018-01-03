@@ -5,7 +5,7 @@
     post_view = Thredded::PostView.new(post, policy(post))
   end
   moderation_state_notice_args = {
-      moderator: record.moderator,
+      moderator: record.moderator.username,
       time_ago:  time_ago(record.created_at)
   }
 %>
