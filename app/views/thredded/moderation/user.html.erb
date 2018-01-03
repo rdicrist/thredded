@@ -46,7 +46,7 @@
                         class: 'thredded--button',
                         params: { id: user.to_model.id, moderation_state: 'blocked' } %>
         <% end %>
-        <% unless user.admin? %>
+        <% unless user.admin %>
           <%= button_to "Ban", "/users/block/#{user_detail.user_id}", :method => "get", data: { confirm: 'Are you sure you want to ban this user? This CANNOT be undone.' } %>
        <% end %>
        <% end %>
