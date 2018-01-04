@@ -1,6 +1,6 @@
 <%# @param post [Thredded::PostView] %>
 <% topic = post.to_model.postable %>
-
+<% post_user_link = user_anon_link(post) %>
 <header>
   <%= image_tag post.avatar_url, class: 'thredded--post--avatar' if post.user %>
   <h2 class="thredded--post--user-and-topic">
