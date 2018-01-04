@@ -2,6 +2,5 @@
 <%= user_detail.moderation_state.to_s.humanize %>
 <%= time_ago user_detail.moderation_state_changed_at, default: '' %>
 <% if !user_detail.moderation_id.blank? %>
-  by 
-  <%= User.find_by(id: user_detail.moderation_id).username %>
+  by <%= User.find_by(id: user_detail.moderation_id).username %>
 <% end %>
