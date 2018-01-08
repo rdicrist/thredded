@@ -44,13 +44,13 @@ $thredded-code-selected-line-background: #f8eec7 !default;
 
 
 // Colors of alerts and flash messages
-$thredded-alert-danger-background: #fbe3e4 !default;
+$thredded-alert-danger-background: ##DBB3B1 !default; //#fbe3e4 original yellow
 $thredded-alert-danger-color: #a94442 !default;
-$thredded-alert-info-background: #e6f3fa !default;
+$thredded-alert-info-background: #BAD8F6 !default; //#e6f3fa original blue
 $thredded-alert-info-color: darken($thredded-brand, 15%) !default;
-$thredded-alert-success-background: #e6efc2 !default;
-$thredded-alert-success-color: #3c763d !default;
-$thredded-alert-warning-background: #fcf8e3 !default;
+$thredded-alert-success-background: #e6efc2 !default; //original green
+$thredded-alert-success-color: #3c763d !default; 
+$thredded-alert-warning-background: #F6FEAA !default; //#fcf8e3 original red
 $thredded-alert-warning-color: #8a6d3b !default;
 
 // Borders
