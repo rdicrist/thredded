@@ -4,5 +4,8 @@
   <h2 class="thredded--post--user"><%= user_anon_link post %></h2>
   <a href="<%= post.permalink_path %>" rel="nofollow" class="thredded--link thredded--post--created-at">
     <%= time_ago post.created_at %>
+    <% if (time_ago post.updated_at) < (time_ago post.created_at) %>
+      <%= time_ago post.updated_at %>
+    <% end %>
   </a>
 </header>
