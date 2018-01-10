@@ -42,7 +42,7 @@ module Thredded
       authorize post, :update?
       
       edit = new_post_params
-      edit[:content]<<'(edited)'
+      edit[:content]<<' (edited #{Time.now.strftime("%H:%M:%S")})'
       post.update_attributes(edit)
 
       redirect_to post_path(post, user: thredded_current_user)
