@@ -35,7 +35,7 @@ module Thredded
 
     def first_post_content
       <<-MARKDOWN
-##We take moderation very seriously so make sure you're familiar with the rules before you post to make sure your posts don't get removed!
+**We take moderation very seriously so make sure you're familiar with the rules before you post to make sure your posts don't get removed!**
     1. DO NOT identify yourself in any way
     2. If you suspect you know someone on the forum, DO NOT identify them in any way
     3. DO NOT use any information to find out real world facts about anyone on the forum
