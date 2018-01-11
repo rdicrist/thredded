@@ -40,7 +40,7 @@ module Thredded
     end
     
     def user_anon_link(post)
-      if post.user.id 
+      if post.user.exists? 
         username = DisplayName.create_unless_exists(post.user.id, post.postable_id)
       else
         username = "User deleted their account"
