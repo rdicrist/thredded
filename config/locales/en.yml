@@ -112,7 +112,7 @@ en:
         content_label: Content
         create_btn: Submit Reply
         create_btn_submitting: Posting...
-        title_label: Add a post
+        title_label: Add a comment
         update_btn: Update Post
         update_btn_submitting: :thredded.form.update_btn_submitting
       pending_moderation_notice: Your post will be published when it has been reviewed by a moderator.
