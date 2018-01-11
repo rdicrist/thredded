@@ -30,17 +30,19 @@ module Thredded
     end
 
     def first_topic_title
-      "Welcome to your messageboard's very first thread"
+      "Don't forget to check out our forum rules before you post"
     end
 
     def first_post_content
-      <<-MARKDOWN
-There's not a whole lot here for now.
-
-These forums are powered by [Thredded](https://github.com/thredded/thredded) v#{Thredded::VERSION}.
-You can contact the Thredded team via the [Thredded chat room](https://gitter.im/thredded/thredded).
-Please let us know that you are using Thredded by tweeting [@thredded](https://twitter.com/thredded)!
-      MARKDOWN
+      <<-MARKDOWN,
+##We take moderation very seriously so make sure you're familiar with the rules before you post to make sure your posts don't get removed!
+    1. DO NOT identify yourself in any way
+    2. If you suspect you know someone on the forum, DO NOT identify them in any way
+    3. DO NOT use any information to find out real world facts about anyone on the forum
+    4. Be kind, courteous, and respectful
+    5. If any personally identifiable information (such as names, emails, phone numbers, etc.) is posted, it will be removed from the site as soon as possible.
+    6. Any members that are disrespectful, inappropriate, or aggressive will be blocked.
+    MARKDOWN
     end
   end
 end
