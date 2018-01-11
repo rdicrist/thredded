@@ -34,7 +34,7 @@ module Thredded
     end
 
     def first_post_content
-      <<-MARKDOWN,
+      <<-MARKDOWN
 ##We take moderation very seriously so make sure you're familiar with the rules before you post to make sure your posts don't get removed!
     1. DO NOT identify yourself in any way
     2. If you suspect you know someone on the forum, DO NOT identify them in any way
