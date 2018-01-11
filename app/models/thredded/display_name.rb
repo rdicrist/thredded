@@ -14,7 +14,7 @@ module Thredded
         validates_uniqueness_of :user_id, scope: :topic_id
         
         def self.create_unless_exists(user_id, topic_id)
-          new_display_name = Haikunator.haikunate(0, '-').capitalize!
+          new_display_name = Haikunator.haikunate(0, ' ').capitalize!
           uncached do
             transaction(requires_new: true) do
               self.find_or_create_by(user_id: user_id, topic_id: topic_id) do |new|
