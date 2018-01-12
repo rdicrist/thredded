@@ -47,7 +47,7 @@
                         class: 'thredded--button',
                         params: { id: user.to_model.id, moderation_state: 'blocked' } %>
           <% unless thredded_current_user.id == 1%>
-          <%= button_to "Make Moderator", "/users/add_admin_to_user/#{user_detail.user_id}", :method => "get", data: { confirm: 'Are you sure you want to give this user moderator privileges?'} %>
+          <%= button_to "Make Moderator", "/users/add_admin/#{user_detail.user_id}", :method => "get", data: { confirm: 'Are you sure you want to give this user moderator privileges?'} %>
           <% end %>
         <% end %>
         <% end %>
@@ -56,7 +56,7 @@
        <% end %>
        <%if user.admin %>
         <% if thredded_current_user.id == 1 %>
-          <%= button_to "Ban", "/users/block/#{user_detail.user_id}", :method => "get", data: { confirm: "Are you sure you want to remove this users's moderator privileges?" } %>
+          <%= button_to "Remove Moderator", "/users/remove_admin/#{user_detail.user_id}", :method => "get", data: { confirm: "Are you sure you want to remove this users's moderator privileges?" } %>
         <% end %>
         <% end %>
        <% end %>
