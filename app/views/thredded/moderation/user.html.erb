@@ -36,6 +36,9 @@
     <%= view_hooks.moderation_user_page.user_moderation_actions.render self, user: user do %>
       <div class="thredded--user--moderation-actions">
         <% unless user_detail.banned? %>
+        <% if thredded_current_user.id == 1 %>
+          <%= button_to "Add Moderator", "/users/add_admin/#{user_detail.user_id}", :method => "get", data: { confirm: 'Are you sure you want to give this user moderator privileges?'} %>
+        <% end %>
         <% unless user_detail.approved? %>
           <%= button_to t('thredded.moderation.approve_btn'), moderate_user_path,
                         class: 'thredded--button',
@@ -46,9 +49,6 @@
           <%= button_to t('thredded.moderation.block_btn'), moderate_user_path,
                         class: 'thredded--button',
                         params: { id: user.to_model.id, moderation_state: 'blocked' } %>
-          <% unless thredded_current_user.id == 1%>
-          <%= button_to "Make Moderator", "/users/add_admin/#{user_detail.user_id}", :method => "get", data: { confirm: 'Are you sure you want to give this user moderator privileges?'} %>
-          <% end %>
         <% end %>
         <% end %>
         <% unless user.admin %>
