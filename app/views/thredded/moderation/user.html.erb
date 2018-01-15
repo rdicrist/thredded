@@ -8,9 +8,12 @@
 <%= thredded_page do %>
   <section class="thredded--main-section">
     <%= view_hooks.moderation_user_page.user_title.render self, user: user do %>
-      <h1 class="thredded--moderation--user--title">
-        <%= user.username %>
-    </h1>
+     <h1 class="thredded--moderation--user--title">
+      <%= user.username %>
+     </h1>
+    <% if user.admin %>
+      <h3>Moderator</h3>
+    <% end %>
     <h3>
       <%= user.screening %>
     </h3>
