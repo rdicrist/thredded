@@ -48,11 +48,6 @@
         <% unless user.admin %>
           <% if thredded_current_user.id == 1 %>
             <%= button_to "Add Moderator", "/users/add_admin/#{user_detail.user_id}", :method => "get", data: { confirm: 'Are you sure you want to give this user moderator privileges?'} %>
-            <% if user.faculty? %>
-              <%= button_to "Remove Faculty Tag", "/users/remove_faculty/#{user_detail.user_id}", :method => "get", data: { confirm: "Are you sure you want to remove this user's faculty member tag?"} %>
-            <% else %>
-              <%= button_to "Add Faculty Tag", "/users/add_faculty/#{user_detail.user_id}", :method => "get", data: { confirm: 'Are you sure you want to tag this user as a faculty member?'} %>
-            <% end %>
         <% end %>
           <%= button_to t('thredded.moderation.block_btn'), moderate_user_path,
                         class: 'thredded--button',
