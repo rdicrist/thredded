@@ -12,3 +12,5 @@ end
 gemspec
 
 eval_gemfile File.expand_path('shared.gemfile', File.dirname(__FILE__))
+
+gem 'kramdown-parser-gfm'
